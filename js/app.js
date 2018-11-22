@@ -27,6 +27,13 @@ Horn.prototype.render = function () {
 
 }
 
+//selecting box filtering
+$('select'[name='horn_creatures']).on('change', function() {
+  let $selection = $(this).val();
+  $('img').hide();
+  $(`img[data-]`)
+})
+
 function readJson() {
   $.get('./data/page-1.json', 'json')
   .then(data =>{
