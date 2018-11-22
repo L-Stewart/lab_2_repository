@@ -1,0 +1,9 @@
+main, img{
+  height: 300px;
+  width: 300px;
+}
+
+main, section {
+  position: relative;
+  float: left;
+}
