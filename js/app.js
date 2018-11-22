@@ -6,6 +6,8 @@ function Horn (obj){
   this.title = obj.title;
   this.image_url = obj.image_url;
   this.description = obj.description;
+  this.horns = obj.horns;
+  this.keyword = obj.keyword;
 
   allHorn.push(this);
 }
