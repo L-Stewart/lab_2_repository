@@ -4,6 +4,5 @@ main, img{
 }
 
 main, section {
-  position: relative;
   float: left;
 }
