@@ -1,11 +1,14 @@
 'use strict';
 
 const allHorn = [];
+const keys = [];
 
 function Horn (obj){
   this.title = obj.title;
   this.image_url = obj.image_url;
   this.description = obj.description;
+  this.keyword = obj.keyword;
+  keys.push(this.keyword);
 
   allHorn.push(this);
 }
