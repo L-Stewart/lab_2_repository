@@ -7,14 +7,8 @@ function Horn (obj){
   this.title = obj.title;
   this.image_url = obj.image_url;
   this.description = obj.description;
-<<<<<<< HEAD
-  this.keyword = obj.keyword;
-  keys.push(this.keyword);
-=======
   this.horns = obj.horns;
   this.keyword = obj.keyword;
->>>>>>> 2f7bf51fa3f6dc34a77cb606451db86a1f1035ac
-
   allHorn.push(this);
 }
 
