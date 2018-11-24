@@ -7,7 +7,6 @@ main img{
   width: 300px;
 }
 
-<<<<<<< HEAD
 main section{
   float: left;
   height: 367px;
@@ -22,9 +21,6 @@ main p{
 }
 
 footer{
-=======
-main, section {
->>>>>>> 2f7bf51fa3f6dc34a77cb606451db86a1f1035ac
   float: left;
   width: 960px;
   text-align: center;

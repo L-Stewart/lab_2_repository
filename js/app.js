@@ -7,13 +7,7 @@ function Horn (obj){
   this.title = obj.title;
   this.image_url = obj.image_url;
   this.description = obj.description;
-<<<<<<< HEAD
   this.keyword = obj.keyword;
-  keys.push(this.keyword);
-=======
-  this.horns = obj.horns;
-  this.keyword = obj.keyword;
->>>>>>> 2f7bf51fa3f6dc34a77cb606451db86a1f1035ac
 
   allHorn.push(this);
 }
@@ -36,9 +30,29 @@ Horn.prototype.render = function () {
 
 }
 
+Horn.prototype.optionMenu = function () {
+  if( keys.indexOf( this.keyword ) === -1 ){
+    $('select').append('<option class = "option"></option>');
+    let $option = $('option[class="option"]');
+
+    $option.attr('value', this.keyword);
+    $option.text(this.keyword);
+
+    $option.removeClass('option');
+
+    keys.push(this.keyword);
+  }
+};
+
 //selecting box filtering
 $('select[name="horn_creatures"]').on('change', function() {
   let $selection = $(this).val();
+
+  if($selection === 'default') {
+    $('div').show();
+    return;
+  }
+
   $('h2').hide()
   $('img').hide()
   $('p').hide()
@@ -54,6 +68,7 @@ function readJson() {
   })
   .then(() => {allHorn.forEach(horn => {
     horn.render();
+    horn.optionMenu();
   })
 })
 }
